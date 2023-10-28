@@ -20,6 +20,7 @@
 
 * {
     font-family: "Roboto-Regular";
+    color: var(--dark-slate-grey);
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto-Bold";
@@ -28,7 +29,7 @@ body, p, ol {
     margin: 0;
     padding: 0;
 }
-p, span {
+p, span, button {
     font-size: 16px;
 }
 li {
@@ -37,6 +38,7 @@ li {
 
 .main-content {
     margin: 0 24px;
+    padding-bottom: 32px;
 }
 
 .list {
@@ -54,4 +56,32 @@ li {
 }
 .list-item-content {
     line-height: 1.4em;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+.form-label {
+    font-family: "Roboto-Bold";
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+.form-input {
+    color: var(--grey);
+    border: 1px solid var(--grey);
+    padding: 16px 24px;
+}
+
+.action-button {
+    width: 100%;
+    padding: 16px 0;
+    color: var(--white);
+    background-color: var(--charcoal-grey);
+    font-family: "Roboto-Bold";
+}
+
+.rounded {
+    border-radius: 8px;
 }
