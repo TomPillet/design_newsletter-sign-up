@@ -28,6 +28,7 @@ html {
 }
 body {
     background-color: var(--white);
+    min-height: 100vh;
     max-width: 840px;
     margin: auto;
 }
@@ -48,14 +49,19 @@ img {
     width: 100%;
 }
 
-.main-content {
-    margin: auto;
-    padding: 0 24px 32px 24px;
-    width: fit-content;
+.content-container {
+    display: flex;
+    flex-direction: column;
 }
 .illustration-wrapper img {
     margin: auto;
     max-height: 400px;
+    object-fit: unset;
+}
+.main-content {
+    margin: auto;
+    padding: 0 24px 32px 24px;
+    width: fit-content;
 }
 
 .list {
@@ -97,6 +103,7 @@ img {
     color: var(--white);
     background-color: var(--charcoal-grey);
     font-family: "Roboto-Bold";
+    border: none;
 }
 
 .rounded {
@@ -105,6 +112,33 @@ img {
 
 @media screen and (min-width: 1280px) {
     body {
-        width: 100%;
+        max-width: unset;
+        background-color: var(--charcoal-grey);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-container {
+        height: 560px;
+        width: 80%;
+        margin: auto;
+        flex-direction: row-reverse;
+        background-color: var(--white);
+        border-radius: 24px;
+    }
+    .content-container > div {
+        width: 400px;
+    }
+    .illustration-wrapper {
+        padding: 20px;
+    }
+    .illustration-wrapper img {
+        height: 100%;
+        max-height: unset;
+        object-fit: cover;
+    }
+    .main-content {
+        flex-grow: 3;
+        padding: 40px;
     }
 }
