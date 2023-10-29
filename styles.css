@@ -3,6 +3,7 @@
     --dark-slate-grey: hsl(234, 29%, 20%);
     --charcoal-grey: hsl(235, 18%, 26%);
     --grey: hsl(231, 7%, 60%);
+    --lightgrey: hsl(231, 7%, 92%);
     --white: hsl(0, 0%, 100%);
 
     --thin-font: 400;
@@ -22,10 +23,18 @@
     font-family: "Roboto-Regular";
     color: var(--dark-slate-grey);
 }
+html {
+    background-color: var(--lightgrey);
+}
+body {
+    background-color: var(--white);
+    max-width: 840px;
+    margin: auto;
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto-Bold";
 }
-body, p, ol {
+p, ol {
     margin: 0;
     padding: 0;
 }
@@ -35,10 +44,18 @@ p, span, button {
 li {
     list-style: none;
 }
+img {
+    width: 100%;
+}
 
 .main-content {
-    margin: 0 24px;
-    padding-bottom: 32px;
+    margin: auto;
+    padding: 0 24px 32px 24px;
+    width: fit-content;
+}
+.illustration-wrapper img {
+    margin: auto;
+    max-height: 400px;
 }
 
 .list {
@@ -84,4 +101,10 @@ li {
 
 .rounded {
     border-radius: 8px;
+}
+
+@media screen and (min-width: 1280px) {
+    body {
+        width: 100%;
+    }
 }
