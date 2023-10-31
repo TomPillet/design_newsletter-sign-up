@@ -108,6 +108,11 @@ img {
     color: var(--grey);
     border: 1px solid var(--grey);
     padding: 16px 24px;
+    transition: .5s all;
+}
+.form-input:hover {
+    border: 2px solid var(--grey);
+    cursor: pointer;
 }
 
 .action-button {
