@@ -127,6 +127,7 @@ img {
     --actionButtonBgColor1: var(--grenade);
     --actionButtonBgColor2: var(--tomato);
     box-shadow: 0px 12px 24px var(--tomato-hidden);
+    cursor: pointer;
 }
 
 .rounded {
