@@ -1,5 +1,7 @@
 :root {
-    --tomato: hsl(4, 100%, 67%);
+    --grenade: hsl(346, 100%, 65%);
+    --tomato: hsl(17, 100%, 67%);
+    --tomato-hidden: hsl(4, 100%, 67%, .5);
     --dark-slate-grey: hsl(234, 29%, 20%);
     --charcoal-grey: hsl(235, 18%, 26%);
     --grey: hsl(231, 7%, 60%);
@@ -8,6 +10,17 @@
 
     --thin-font: 400;
     --bold-font: 700;
+}
+
+@property --actionButtonBgColor1 {
+    syntax: '<color>';
+    initial-value: white;
+    inherits: false;
+}
+@property --actionButtonBgColor2 {
+    syntax: '<color>';
+    initial-value: white;
+    inherits: false;
 }
 
 @font-face {
@@ -101,9 +114,19 @@ img {
     width: 100%;
     padding: 16px 0;
     color: var(--white);
-    background-color: var(--charcoal-grey);
     font-family: "Roboto-Bold";
     border: none;
+
+    --actionButtonBgColor1: var(--charcoal-grey);
+    --actionButtonBgColor2: var(--charcoal-grey);
+    background: linear-gradient(.125turn, var(--actionButtonBgColor1), var(--actionButtonBgColor2));
+    box-shadow: none;
+    transition: .5s --actionButtonBgColor1, .5s --actionButtonBgColor2, .5s all;
+}
+.action-button:hover {
+    --actionButtonBgColor1: var(--grenade);
+    --actionButtonBgColor2: var(--tomato);
+    box-shadow: 0px 12px 24px var(--tomato-hidden);
 }
 
 .rounded {
