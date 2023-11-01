@@ -20,16 +20,14 @@ function validateEmail() {
     const isArobase = email.includes('@');
     const isDotCom = email.substring(email.length-4, email.length) === ".com";
 
-    if (email.length === 0 || email === null || email === undefined) {
-        const msg = 'Veuillez renseigner un email.';
-        displayError(emailInput, emailError, msg)
-    }
-    else if (!isArobase || !isDotCom) {
-        const msg = 'L\'email saisi est invalide.';
-        displayError(emailInput, emailError, msg);
-    }
-    else {
+    if (isArobase && isDotCom) {
         hideError(emailInput, emailError);
+    } else {
+        let msg = "L'email saisi est invalide.";
+        if (email.length === 0 || email === null || email === undefined) {
+            msg = "Veuillez renseigner un email.";
+        }
+        displayError(emailInput, emailError, msg);
     }
 }
 
