@@ -22,6 +22,7 @@ function validateEmail() {
 
     if (isArobase && isDotCom) {
         hideError(emailInput, emailError);
+        window.location.href = './success.html';
     } else {
         let msg = "L'email saisi est invalide.";
         if (email.length === 0 || email === null || email === undefined) {
