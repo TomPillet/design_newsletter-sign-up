@@ -32,12 +32,13 @@
         </li>
       </ol>
 
-      <form action="" id="newsletter-register-form">
+      <form id="newsletter-register-form">
         <div class="form-section">
           <label class="form-label" for="email">Email address</label>
-          <input class="form-input rounded" type="text" name="email" placeholder="email@company.com">
+          <span id="newsletter-register-email-error" class="hide input-error">TESTESTEST</span>
+          <input class="form-input rounded" type="text" name="email" id="newsletter-register-email" placeholder="email@company.com" required>
         </div>
-        <button class="action-button rounded">Subscribe to monthly newsletter</button>
+        <button type="button" onclick="isFormValid()" class="action-button rounded">Subscribe to monthly newsletter</button>
       </form>
     </div>
   </div>

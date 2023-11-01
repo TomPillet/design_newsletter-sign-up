@@ -102,16 +102,16 @@ img {
 .form-label {
     font-family: "Roboto-Bold";
     font-size: 12px;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 .form-input {
     color: var(--grey);
     border: 1px solid var(--grey);
     padding: 16px 24px;
-    transition: .5s all;
+    margin-top: 4px;
 }
 .form-input:hover {
-    border: 2px solid var(--grey);
+    border: 1px solid var(--charcoal-grey);
     cursor: pointer;
 }
 
@@ -139,6 +139,16 @@ img {
     border-radius: 8px;
 }
 
+.hide {
+    display: none !important;
+}
+.input-error {
+    display: block;
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+}
+
 @media screen and (min-width: 1280px) {
     body {
         max-width: unset;
@@ -149,7 +159,7 @@ img {
 
     .content-container {
         height: 560px;
-        width: 80%;
+        width: 1024px;
         margin: auto;
         flex-direction: row-reverse;
         background-color: var(--white);
