@@ -9,19 +9,26 @@ function changeNewsletterImgSource() {
 }
 
 function validateForm() {
+    validateEmail();
+}
+
+function validateEmail() {
     const emailError = document.querySelector('#newsletter-register-email-error');
     const emailInput = document.querySelector('#newsletter-register-email');
     const email = emailInput.value;
+
+    const isArobase = email.includes('@');
+    const isDotCom = email.substring(email.length-4, email.length) === ".com";
 
     if (email.length === 0 || email === null || email === undefined) {
         const msg = 'Veuillez renseigner un email.';
         displayError(emailInput, emailError, msg)
     }
-    else if (!email.includes('@')) {
+    else if (!isArobase || !isDotCom) {
         const msg = 'L\'email saisi est invalide.';
         displayError(emailInput, emailError, msg);
     }
-    else if (email.includes('@') && email.substring(email.length-4, email.length) === ".com") {
+    else {
         hideError(emailInput, emailError);
     }
 }

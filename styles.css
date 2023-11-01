@@ -104,6 +104,11 @@ img {
     font-size: 12px;
     margin-bottom: 4px;
 }
+.form-label-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .form-input {
     color: var(--grey);
     border: 1px solid var(--grey);

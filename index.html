@@ -34,8 +34,10 @@
 
       <form id="newsletter-register-form">
         <div class="form-section">
-          <label class="form-label" for="email">Email address</label>
-          <span id="newsletter-register-email-error" class="hide error">TESTESTEST</span>
+          <div class="form-label-container">
+            <label class="form-label" for="email">Email address</label>
+            <span id="newsletter-register-email-error" class="hide error">TESTESTEST</span>
+          </div>
           <input id="newsletter-register-email" class="form-input rounded" type="email" name="email" placeholder="email@company.com" required>
         </div>
         <button type="button" onclick="validateForm()" class="action-button rounded">Subscribe to monthly newsletter</button>
