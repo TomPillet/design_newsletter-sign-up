@@ -114,6 +114,22 @@ img {
     border: 1px solid var(--charcoal-grey);
     cursor: pointer;
 }
+.form-input.error {
+    border-color: red;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+.form-input:not(:placeholder-shown):not(.error) {
+    color: var(--charcoal-grey);
+}
+
+.error, .error::placeholder {
+    color: red;
+}
+span.error {
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+}
 
 .action-button {
     width: 100%;
@@ -135,19 +151,13 @@ img {
     cursor: pointer;
 }
 
+.hide {
+    display: none !important;
+}
 .rounded {
     border-radius: 8px;
 }
 
-.hide {
-    display: none !important;
-}
-.input-error {
-    display: block;
-    color: red;
-    font-size: 12px;
-    font-style: italic;
-}
 
 @media screen and (min-width: 1280px) {
     body {
